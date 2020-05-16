@@ -1,0 +1,413 @@
+-- update `price_list_2018` set `food_category_id` = 2 where price_list_id = 12;
+
+insert into price_list_2018(food_name, stock_name, food_category_id, price_large, price_medium, price_regular, is_kids, created_on) values
+(
+	'Chicken & Mushroom', 	-- food name
+	'chicken_mushroom', 	-- stock name
+	3,		-- food category id
+	null,		-- price large
+	null,		-- price meduim
+	2.95,		-- price regular
+	false,		-- is kids meal
+	NOW()	-- date created
+),
+(
+	'Beef & Kidney', 	-- food name
+	'beef_kidney', 	-- stock name
+	3,		-- food category id
+	null,		-- price large
+	null,		-- price meduim
+	2.95,		-- price regular
+	false,		-- is kids meal
+	NOW()	-- date created
+),
+(
+	'Steak & Kidney', 	-- food name
+	'steak_kidney', 	-- stock name
+	3,		-- food category id
+	null,		-- price large
+	null,		-- price meduim
+	2.95,		-- price regular
+	false,		-- is kids meal
+	NOW()	-- date created
+),
+(
+	'Jumbo Sausage', 	-- food name
+	'jumbo_sausage', 	-- stock name
+	4,		-- food category id
+	null,		-- price large
+	null,		-- price meduim
+	1.95,		-- price regular
+	false,		-- is kids meal
+	NOW()	-- date created
+),
+(
+	'Battered Sausage', 	-- food name
+	'battered_sausage', 	-- stock name
+	4,		-- food category id
+	null,		-- price large
+	null,		-- price meduim
+	1.95,		-- price regular
+	false,		-- is kids meal
+	NOW()	-- date created
+),
+(
+	'Savaloy', 	-- food name
+	'savaloy', 	-- stock name
+	4,		-- food category id
+	null,		-- price large
+	null,		-- price meduim
+	1.95,		-- price regular
+	false,		-- is kids meal
+	NOW()	-- date created
+),
+(
+	'6oz Gourmet Burger', 	-- food name
+	'six_oz_gourmet_burger', 	-- stock name
+	5,		-- food category id
+	null,		-- price large
+	null,		-- price meduim
+	4.00,		-- price regular
+	false,		-- is kids meal
+	NOW()	-- date created
+),
+(
+	'6oz Gourmet Cheese Burger', 	-- food name
+	'siz_oz_gourmet_cheese_burger', 	-- stock name
+	5,		-- food category id
+	null,		-- price large
+	null,		-- price meduim
+	4.30,		-- price regular
+	false,		-- is kids meal
+	NOW()	-- date created
+),
+(
+	'1/4lb Beef Burger', 	-- food name
+	'quarter_lb_beef_burger', 	-- stock name
+	5,		-- food category id
+	null,		-- price large
+	null,		-- price meduim
+	3.20,		-- price regular
+	false,		-- is kids meal
+	NOW()	-- date created
+),
+(
+	'1/4 Beef Burger with Cheese', 	-- food name
+	'quarter_beef_burger_with_cheese', 	-- stock name
+	5,		-- food category id
+	null,		-- price large
+	null,		-- price meduim
+	3.40,		-- price regular
+	false,		-- is kids meal
+	NOW()	-- date created
+),
+(
+	'Chicken Burger', 	-- food name
+	'chicken_burger', 	-- stock name
+	5,		-- food category id
+	null,		-- price large
+	null,		-- price meduim
+	3.40,		-- price regular
+	false,		-- is kids meal
+	NOW()	-- date created
+),
+(
+	'Royal Chicken Burger', 	-- food name
+	'royal_chicken_burger', 	-- stock name
+	5,		-- food category id
+	null,		-- price large
+	null,		-- price meduim
+	3.85,		-- price regular
+	false,		-- is kids meal
+	NOW()	-- date created
+),
+(
+	'Chicken Burger with onion rings and cheese', 	-- food name
+	'chicken_burger_with_onion_rings_and_cheese', 	-- stock name
+	5,		-- food category id
+	null,		-- price large
+	null,		-- price meduim
+	null,		-- price regular
+	false,		-- is kids meal
+	NOW()	-- date created
+),
+(
+	'Veggie Burger', 	-- food name
+	'veggie_burger', 	-- stock name
+	5,		-- food category id
+	null,		-- price large
+	null,		-- price meduim
+	2.90,		-- price regular
+	false,		-- is kids meal
+	NOW()	-- date created
+),
+(
+	'Rack of Ribs', 	-- food name
+	'rack_ribs', 	-- stock name
+	10,		-- food category id
+	6.95,		-- price large
+	6.45,		-- price meduim
+	null,		-- price regular
+	false,		-- is kids meal
+	NOW()	-- date created
+),
+(
+	'Mega Mixer', 	-- food name
+	'mega_mixer', 	-- stock name
+	10,		-- food category id
+	null,		-- price large
+	9.50,		-- price meduim
+	null,		-- price regular
+	false,		-- is kids meal
+	NOW()	-- date created
+),
+(
+	'1 Medium Rack of Ribs & 2 pieces of Southern Fried Chicken', 	-- food name
+	'1_medium_rack_ribs_&_2_piece_southern_chicken', 	-- stock name
+	10,		-- food category id
+	null,		-- price large
+	5.50,		-- price meduim
+	null,		-- price regular
+	false,		-- is kids meal
+	NOW()	-- date created
+),
+(
+	'1/4 Spit Roast Chicken Mixer', 	-- food name
+	'quarter_spit_roast_chicken_mixer', 	-- stock name
+	10,		-- food category id
+	null,		-- price large
+	5.50,		-- price meduim
+	null,		-- price regular
+	false,		-- is kids meal
+	NOW()	-- date created
+),
+(
+	'1/2 Rack of Ribs & 1 Piece of Southern Fried Chicken', 	-- food name
+	'half_rack_ribs_one_piece_southern_chicken', 	-- stock name
+	10,		-- food category id
+	null,		-- price large
+	null,		-- price meduim
+	null,		-- price regular
+	false,		-- is kids meal
+	NOW()	-- date created
+),
+(
+	'Chicken Nuggers Meal', 	-- food name
+	'chicken_nuggets', 	-- stock name
+	6,		-- food category id
+	null,		-- price large
+	null,		-- price meduim
+	3.85,		-- price regular
+	true,		-- is kids meal
+	NOW()	-- date created
+),
+(
+	'Southern Fried Chicken Meal', 	-- food name
+	'southern_chicken', 	-- stock name
+	6,		-- food category id
+	null,		-- price large
+	null,		-- price meduim
+	3.85,		-- price regular
+	true,		-- is kids meal
+	NOW()	-- date created
+),
+(
+	'Sausage Meal', 	-- food name
+	'kids_sausage', 	-- stock name
+	6,		-- food category id
+	null,		-- price large
+	null,		-- price meduim
+	3.75,		-- price regular
+	true,		-- is kids meal
+	NOW()	-- date created
+),
+(
+	'Saveloy Meal', 	-- food name
+	'kids_saveloy', 	-- stock name
+	6,		-- food category id
+	null,		-- price large
+	null,		-- price meduim
+	3.75,		-- price regular
+	true,		-- is kids meal
+	NOW()	-- date created
+),
+(
+	'Cod Fillet Strip Meal', 	-- food name
+	'kids_cod_fillet_strip', 	-- stock name
+	6,		-- food category id
+	null,		-- price large
+	null,		-- price meduim
+	3.85,		-- price regular
+	true,		-- is kids meal
+	NOW()	-- date created
+),
+(
+	'Fishcake Meal', 	-- food name
+	'kids_fishcake', 	-- stock name
+	6,		-- food category id
+	null,		-- price large
+	null,		-- price meduim
+	3.75,		-- price regular
+	true,		-- is kids meal
+	NOW()	-- date created
+),
+(
+	'Onion Rings', 	-- food name
+	'side_onion_rings', 	-- stock name
+	7,		-- food category id
+	null,		-- price large
+	null,		-- price meduim
+	1.80,		-- price regular
+	false,		-- is kids meal
+	NOW()	-- date created
+),
+(
+	'Breaded Mushrooms', 	-- food name
+	'side_breaded_mushrooms', 	-- stock name
+	7,		-- food category id
+	null,		-- price large
+	null,		-- price meduim
+	1.80,		-- price regular
+	false,		-- is kids meal
+	NOW()	-- date created
+),
+(
+	'Bread Roll', 	-- food name
+	'side_bread_roll', 	-- stock name
+	7,		-- food category id
+	null,		-- price large
+	null,		-- price meduim
+	0.75,		-- price regular
+	false,		-- is kids meal
+	NOW()	-- date created
+),
+(
+	'Chip Roll', 	-- food name
+	'side_chip_roll', 	-- stock name
+	7,		-- food category id
+	null,		-- price large
+	null,		-- price meduim
+	2.40,		-- price regular
+	false,		-- is kids meal
+	NOW()	-- date created
+),
+(
+	'Curry Sauce', 	-- food name
+	'side_curry_sauce', 	-- stock name
+	7,		-- food category id
+	null,		-- price large
+	null,		-- price meduim
+	1.70,		-- price regular
+	false,		-- is kids meal
+	NOW()	-- date created
+),
+(
+	'Mushy Peas', 	-- food name
+	'side_mushy_peas', 	-- stock name
+	7,		-- food category id
+	null,		-- price large
+	null,		-- price meduim
+	1.70,		-- price regular
+	false,		-- is kids meal
+	NOW()	-- date created
+),
+(
+	'Pickled Onions', 	-- food name
+	'side_pickled_onions', 	-- stock name
+	7,		-- food category id
+	null,		-- price large
+	null,		-- price meduim
+	0.55,		-- price regular
+	false,		-- is kids meal
+	NOW()	-- date created
+),
+(
+	'Pickled Egg', 	-- food name
+	'side_pickled_egg', 	-- stock name
+	7,		-- food category id
+	null,		-- price large
+	null,		-- price meduim
+	0.70,		-- price regular
+	false,		-- is kids meal
+	NOW()	-- date created
+),
+(
+	'Gherkin', 	-- food name
+	'side_gherkin', 	-- stock name
+	7,		-- food category id
+	null,		-- price large
+	null,		-- price meduim
+	0.70,		-- price regular
+	false,		-- is kids meal
+	NOW()	-- date created
+),
+(
+	'Tartare Sauce', 	-- food name
+	'side_tartare_sauce', 	-- stock name
+	7,		-- food category id
+	null,		-- price large
+	null,		-- price meduim
+	1.60,		-- price regular
+	false,		-- is kids meal
+	NOW()	-- date created
+),
+(
+	'Bottles of Sauce / Vinegar', 	-- food name
+	'side_bottles_sauce_vinegar', 	-- stock name
+	7,		-- food category id
+	null,		-- price large
+	null,		-- price meduim
+	1.60,		-- price regular
+	false,		-- is kids meal
+	NOW()	-- date created
+),
+(
+	'Sauce Dips', 	-- food name
+	'side_sauce_dips', 	-- stock name
+	7,		-- food category id
+	null,		-- price large
+	null,		-- price meduim
+	0.35,		-- price regular
+	false,		-- is kids meal
+	NOW()	-- date created
+),
+(
+	'Pineapple Fritter', 	-- food name
+	'side_pinapple_fritter', 	-- stock name
+	7,		-- food category id
+	null,		-- price large
+	null,		-- price meduim
+	1.40,		-- price regular
+	false,		-- is kids meal
+	NOW()	-- date created
+),
+(
+	'Cold Cans', 	-- food name
+	'drinks_cold_cans', 	-- stock name
+	8,		-- food category id
+	null,		-- price large
+	null,		-- price meduim
+	1.00,		-- price regular
+	false,		-- is kids meal
+	NOW()	-- date created
+),
+(
+	'Fruit Shoots', 	-- food name
+	'drinks_fruit_shoots', 	-- stock name
+	8,		-- food category id
+	null,		-- price large
+	null,		-- price meduim
+	0.95,		-- price regular
+	false,		-- is kids meal
+	NOW()	-- date created
+),
+(
+	'Star Slush', 	-- food name
+	'drinks_star_slush', 	-- stock name
+	8,		-- food category id
+	1.35,		-- price large
+	1.10,		-- price meduim
+	null,		-- price regular
+	false,		-- is kids meal
+	NOW()	-- date created
+);

@@ -1,0 +1,40 @@
+create table if not exists price_list_2018 (
+	price_list_id serial primary key,
+	food_name varchar(100) not null,
+    stock_name varchar(100) not null,
+	price_regular decimal(15, 2),
+    price_medium decimal(15, 2),
+    price_large decimal(15,2),
+    is_kids boolean,
+    food_category_id int,
+    created_on timestamp not null default current_date,
+    update_on timestamp
+);
+
+create table if not exists food_category (
+	food_category_id serial primary key,
+    category_name varchar(30) not null,
+    food_id int,
+    created_on timestamp not null default current_date,
+    update_on timestamp
+);
+
+insert into food_category(category_name, created_on) values
+('fish', NOW()),
+('chicken', NOW()),
+('pukka pies', NOW()),
+('sausages', NOW()),
+('burgers', NOW()),
+('kids meal', NOW()),
+('side orders', NOW()),
+('drinks', NOW()),
+('chips', NOW()),
+('ribs', NOW());
+
+--drop table price_list_2018;
+
+--drop table food_category;
+
+select * from food_category;
+
+
