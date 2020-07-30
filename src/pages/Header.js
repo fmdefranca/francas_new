@@ -1,9 +1,14 @@
 import React from "react";
-import Button from "@material-ui/core/Button";
 import Grid from "@material-ui/core/Grid";
-import Typography from "@material-ui/core/Typography";
-import Paper from "@material-ui/core/Paper";
+import Card from "@material-ui/core/Card";
+import CardContent from "@material-ui/core/CardContent";
 import { makeStyles } from "@material-ui/core/styles";
+import PhoneRoundedIcon from "@material-ui/icons/PhoneRounded";
+import LocationOnIcon from "@material-ui/icons/LocationOn";
+import ArrowForwardIcon from "@material-ui/icons/ArrowForward";
+import WatchLaterIcon from "@material-ui/icons/WatchLater";
+import Typography from "@material-ui/core/Typography";
+import Button from "@material-ui/core/Button";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -19,14 +24,20 @@ const useStyles = makeStyles((theme) => ({
     backgroundSize: "cover",
     backgroundPosition: "center",
   },
-  paper: {
-    // margin: theme.spacing(8, 4),
+  headerBanner: {
+    padding: theme.spacing(6, 4),
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
+    "& h1": {
+      border: "1px solid red",
+    },
   },
   logo: {
-    width: "18em",
+    width: "14em",
+  },
+  headerInformationBanner: {
+    alignItems: "center",
   },
 }));
 
@@ -42,19 +53,47 @@ export default function Header() {
           justify="space-between"
           style={{ border: "2px solid red", padding: "2.5em 5em" }}
         >
-          <div>
+          <Grid item xs={12} md={6}>
             <img
               className={classes.logo}
               src="/images/logo_white.png"
               alt="Franca's Logo"
             />
-          </div>
-          <Paper elevation={0} className={classes.paper}>
-            <Grid container direction="row">
-              <div>017888888282</div>
-              <div>Open today: 11 till 2</div>
-            </Grid>
-          </Paper>
+          </Grid>
+
+          {/* Modifying here */}
+          <Grid item xs={12} sm={4} md={4}>
+            <Card>
+              <Grid container direction="row" alignContent="space-between">
+                <Grid>
+                  <CardContent>
+                    <div>
+                      <PhoneRoundedIcon style={{ fontSize: 40 }} />
+                      <Typography variant="h6" component="span">
+                        01920 462 713
+                      </Typography>
+                    </div>
+                    <div>
+                      <LocationOnIcon style={{ fontSize: 40 }} />
+                      <Typography variant="h6" component="span">
+                        01920 462 713
+                      </Typography>
+                    </div>
+                  </CardContent>
+                </Grid>
+                <Grid>
+                  <CardContent>
+                    <Typography variant="h6" component="span">
+                      AM 11:00 -- 14:30
+                      <br />
+                      PM 16:00 -- 21:00
+                    </Typography>
+                  </CardContent>
+                </Grid>
+              </Grid>
+            </Card>
+          </Grid>
+          {/* end modifying */}
         </Grid>
       </Grid>
     </Grid>
