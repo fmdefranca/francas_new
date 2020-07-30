@@ -8,6 +8,11 @@ const theme = createMuiTheme({
   typography: {
     fontFamily: ["Source Serif Pro", "serif"].join(","),
   },
+  palette: {
+    text: {
+      secondary: "#FFFFFF",
+    },
+  },
 });
 
 export default theme;

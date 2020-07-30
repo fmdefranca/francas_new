@@ -38,6 +38,7 @@ const useStyles = makeStyles((theme) => ({
   },
   headerInformationBanner: {
     alignItems: "center",
+    color: "grey",
   },
 }));
 
@@ -51,7 +52,7 @@ export default function Header() {
           container
           direction="row"
           justify="space-between"
-          style={{ border: "2px solid red", padding: "2.5em 5em" }}
+          style={{ padding: "2.5em 5em" }}
         >
           <Grid item xs={12} md={6}>
             <img
@@ -63,7 +64,7 @@ export default function Header() {
 
           {/* Modifying here */}
           <Grid item xs={12} sm={4} md={4}>
-            <Card>
+            <Card className={classes.headerInformationBanner}>
               <Grid container direction="row" alignContent="space-between">
                 <Grid>
                   <CardContent>
@@ -83,17 +84,51 @@ export default function Header() {
                 </Grid>
                 <Grid>
                   <CardContent>
-                    <Typography variant="h6" component="span">
-                      AM 11:00 -- 14:30
-                      <br />
-                      PM 16:00 -- 21:00
-                    </Typography>
+                    <div>
+                      <WatchLaterIcon style={{ fontSize: 60 }} />{" "}
+                      <Typography variant="h6" component="span">
+                        Open Today
+                      </Typography>
+                    </div>
+                    <div>
+                      <Typography variant="h6" component="span">
+                        AM 11:00 -- 14:30
+                        <br />
+                        PM 16:00 -- 21:00
+                      </Typography>
+                    </div>
                   </CardContent>
                 </Grid>
               </Grid>
             </Card>
           </Grid>
           {/* end modifying */}
+        </Grid>
+        <Grid
+          container
+          direction="column"
+          justify="space-evenly"
+          alignItems="center"
+          xs={12}
+        >
+          <Grid item>
+            <Typography color="textSecondary" variant="h1">
+              ORDER
+            </Typography>
+          </Grid>
+          <Grid item>
+            <Typography color="textSecondary" variant="h1">
+              COLLECT
+            </Typography>
+          </Grid>
+          <Grid item>
+            <Typography color="textSecondary" variant="h1">
+              ENJOY
+            </Typography>
+          </Grid>
+          <Grid item>
+            <Button variant="contained">SEE MENU</Button>
+          </Grid>
         </Grid>
       </Grid>
     </Grid>
