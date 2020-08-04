@@ -22,6 +22,11 @@ const useStyles = makeStyles((theme) => ({
   menuHeading: {
     marginTop: theme.spacing(8),
   },
+  pricesGrid: {
+    padding: theme.spacing(2),
+    textAlign: "center",
+    backgroundColor: "white",
+  },
 }));
 
 const cards = [
@@ -394,9 +399,20 @@ export default function Album() {
                   </Typography>
                   {card.items.map((n) => (
                     <Typography>
-                      <span>
-                        {n.name} : {n.large} {n.medium} {n.regular}
-                      </span>
+                      <Grid container>
+                        <Grid item xs={6}>
+                          <div className={classes.paper}>test</div>
+                        </Grid>
+                        <Grid item xs={2}>
+                          <div className={classes.paper}>test</div>
+                        </Grid>
+                        <Grid item xs={2}>
+                          <div className={classes.paper}>test</div>
+                        </Grid>
+                        <Grid item xs={2}>
+                          <div className={classes.paper}>test</div>
+                        </Grid>
+                      </Grid>
                     </Typography>
                   ))}
                 </CardContent>
