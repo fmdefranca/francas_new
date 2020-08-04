@@ -1,30 +1,12 @@
 import React from "react";
-import AppBar from "@material-ui/core/AppBar";
-import Button from "@material-ui/core/Button";
-import CameraIcon from "@material-ui/icons/PhotoCamera";
 import Card from "@material-ui/core/Card";
-import CardActions from "@material-ui/core/CardActions";
 import CardContent from "@material-ui/core/CardContent";
-import CardMedia from "@material-ui/core/CardMedia";
-import CssBaseline from "@material-ui/core/CssBaseline";
 import Grid from "@material-ui/core/Grid";
-import Toolbar from "@material-ui/core/Toolbar";
 import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/core/styles";
 import Container from "@material-ui/core/Container";
-import Link from "@material-ui/core/Link";
 
 const useStyles = makeStyles((theme) => ({
-  icon: {
-    marginRight: theme.spacing(2),
-  },
-  heroContent: {
-    backgroundColor: theme.palette.background.paper,
-    padding: theme.spacing(8, 0, 6),
-  },
-  heroButtons: {
-    marginTop: theme.spacing(4),
-  },
   cardGrid: {
     paddingTop: theme.spacing(8),
     paddingBottom: theme.spacing(8),
@@ -34,25 +16,95 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     flexDirection: "column",
   },
-  cardMedia: {
-    paddingTop: "56.25%", // 16:9
-  },
   cardContent: {
     flexGrow: 1,
   },
-  footer: {
-    backgroundColor: theme.palette.background.paper,
-    padding: theme.spacing(6),
+  menuHeading: {
+    marginTop: theme.spacing(8),
   },
 }));
 
-const cards = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+const cards = [
+  {
+    name: "fish",
+    items: [
+      {
+        name: "Chicken & Mushroom",
+        low: null,
+        med: null,
+        high: 2.95,
+      },
+      {
+        name: "Beef & Kidney",
+        low: null,
+        med: null,
+        high: 2.95,
+      },
+    ],
+  },
+  {
+    name: "chicken",
+    items: [
+      {
+        name: "Steak & Kidney",
+        low: null,
+        med: null,
+        high: 2.95,
+      },
+      {
+        name: "Jumbo Sausage",
+        low: null,
+        med: null,
+        high: 1.95,
+      },
+    ],
+  },
+  {
+    name: "beef",
+    items: [
+      {
+        name: "Battered Sausage",
+        low: null,
+        med: null,
+        high: 1.95,
+      },
+      {
+        name: "Savaloy",
+        low: null,
+        med: null,
+        high: 1.95,
+      },
+    ],
+  },
+  {
+    name: "ribs",
+    items: [
+      {
+        name: "6oz Gourmet Burger",
+        low: null,
+        med: null,
+        high: 4.0,
+      },
+      {
+        name: "6oz Gourmet Cheese Burger",
+        low: null,
+        med: null,
+        high: 4.3,
+      },
+    ],
+  },
+];
 
 export default function Album() {
   const classes = useStyles();
 
   return (
     <React.Fragment>
+      <Container maxWidth="md" className={classes.menuHeading}>
+        <Grid container justify="center">
+          <Typography variant="h2">MENU</Typography>
+        </Grid>
+      </Container>
       <Container className={classes.cardGrid} maxWidth="md">
         {/* End hero unit */}
         <Grid container spacing={4}>
@@ -61,12 +113,13 @@ export default function Album() {
               <Card className={classes.card}>
                 <CardContent className={classes.cardContent}>
                   <Typography gutterBottom variant="h5" component="h2">
-                    Heading
+                    {card.name}
                   </Typography>
-                  <Typography>
-                    This is a media card. You can use this section to describe
-                    the content.
-                  </Typography>
+                  {card.items.map((n) => (
+                    <Typography>
+                      <span>{n.name} : {n.low} {n.med} {n.high}</span>
+                    </Typography>
+                  ))}
                 </CardContent>
               </Card>
             </Grid>

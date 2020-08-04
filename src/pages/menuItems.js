@@ -1,0 +1,48 @@
+ {
+	'Chicken & Mushroom',
+	null,		 
+	null,		 
+	2.95,		 
+},
+ {
+	'Beef & Kidney',
+	null,		 
+	null,		 
+	2.95,		 
+},
+ {
+	'Steak & Kidney',
+	null,		 
+	null,		 
+	2.95,		 
+},
+ {
+	'Jumbo Sausage',
+	null,		 
+	null,		 
+	1.95,		 
+},
+ {
+	'Battered Sausage',
+	null,		 
+	null,		 
+	1.95,		 
+},
+ {
+	'Savaloy',
+	null,		 
+	null,		 
+	1.95,		 
+},
+ {
+	'6oz Gourmet Burger',
+	null,		 
+	null,		 
+	4.00,		 
+},
+ {
+	'6oz Gourmet Cheese Burger',
+	null,		 
+	null,		 
+	4.30,		 
+},
