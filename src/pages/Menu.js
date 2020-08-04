@@ -387,33 +387,50 @@ export default function Album() {
           <Typography variant="h2">MENU</Typography>
         </Grid>
       </Container>
-      <Container className={classes.cardGrid} maxWidth="md">
+      <Container className={classes.cardGrid} maxWidth="lg">
         {/* End hero unit */}
         <Grid container spacing={4}>
           {cards.map((card) => (
             <Grid item key={card} xs={12} sm={6} md={4}>
               <Card className={classes.card}>
                 <CardContent className={classes.cardContent}>
-                  <Typography gutterBottom variant="h5" component="h2">
-                    {card.name}
-                  </Typography>
+                  <Grid container>
+                    <Grid item xs={6}>
+                      <Typography gutterBottom variant="h5" component="h4">
+                        {card.name}
+                      </Typography>
+                    </Grid>
+                    <Grid item xs={2}>
+                      <Typography variant="h5" component="h4">
+                        Reg
+                      </Typography>
+                    </Grid>
+                    <Grid item xs={2}>
+                      <Typography variant="h5" component="h4">
+                        Med
+                      </Typography>
+                    </Grid>
+                    <Grid item xs={2}>
+                      <Typography variant="h5" component="h4">
+                        Lrg
+                      </Typography>
+                    </Grid>
+                  </Grid>
                   {card.items.map((n) => (
-                    <Typography>
-                      <Grid container>
-                        <Grid item xs={6}>
-                          <div className={classes.paper}>test</div>
-                        </Grid>
-                        <Grid item xs={2}>
-                          <div className={classes.paper}>test</div>
-                        </Grid>
-                        <Grid item xs={2}>
-                          <div className={classes.paper}>test</div>
-                        </Grid>
-                        <Grid item xs={2}>
-                          <div className={classes.paper}>test</div>
-                        </Grid>
+                    <Grid container>
+                      <Grid item xs={6}>
+                        <div className={classes.paper}>{n.name}</div>
                       </Grid>
-                    </Typography>
+                      <Grid item xs={2}>
+                        <div className={classes.paper}>{n.regular}</div>
+                      </Grid>
+                      <Grid item xs={2}>
+                        <div className={classes.paper}>{n.medium}</div>
+                      </Grid>
+                      <Grid item xs={2}>
+                        <div className={classes.paper}>{n.large}</div>
+                      </Grid>
+                    </Grid>
                   ))}
                 </CardContent>
               </Card>
