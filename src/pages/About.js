@@ -1,11 +1,12 @@
 import React from "react";
-import Card from "@material-ui/core/Card";
-import CardContent from "@material-ui/core/CardContent";
+import Box from "@material-ui/core/Box";
 import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/core/styles";
 import Container from "@material-ui/core/Container";
-
+import LocationOnIcon from "@material-ui/icons/LocationOn";
+import PhoneIcon from "@material-ui/icons/Phone";
+import EmailIcon from "@material-ui/icons/Email";
 
 const useStyles = makeStyles((theme) => ({
   cardGrid: {
@@ -30,6 +31,13 @@ const useStyles = makeStyles((theme) => ({
   underline: {
     textDecoration: "underline",
   },
+  box: {
+    border: "1px solid red",
+    backgroundColor: "#ECF0F1",
+  },
+  addressBox: {
+    color: "#808080",
+  },
 }));
 
 export default function About() {
@@ -45,22 +53,47 @@ export default function About() {
         </Grid>
       </Container>
       <Container className={classes.cardGrid} maxWidth="lg">
-        {/* End hero unit */}
-        <Grid container spacing={4}>
-          <Grid item xs={12} sm={6} md={4}>
-            <Grid container>
-              <Grid item xs={4}>
-                <div>Address</div>
-                <div>Franca’s Fish and Chips 33 The Green Ware SG12 0QW</div>
-                <div>01920 462 713</div>
-                <div>info@francasfishandchips.co.uk</div>
-              </Grid>
-              <Grid item xs={8}>
-                <Typography variant="body1" color="primary" align="center">
-                  OPENING TIMES
+        <Grid container>
+          <Grid container xs={12} md={4}>
+            <Grid
+              container
+              direction="column"
+              // alignItems="center"
+
+              className={classes.box}
+            >
+              <Grid item>
+                <Typography variant="h4">
+                  <LocationOnIcon style={{ fontSize: 40 }} />
+                  ADDRESS
                 </Typography>
               </Grid>
+              <Grid item>
+                <Box className={classes.addressBox}>
+                  <Typography variant="body1">
+                    Franca’s Fish and Chips
+                    <br />
+                    33 The Green
+                    <br />
+                    Ware <br />
+                    SG12 0QW
+                  </Typography>
+                </Box>
+              </Grid>
+              <Grid item>
+                <PhoneIcon style={{ fontSize: 40 }} />
+                01920 462 713
+              </Grid>
+              <Grid item>
+                <EmailIcon style={{ fontSize: 40 }} />
+                info@francasfishandchips.co.uk
+              </Grid>
             </Grid>
+          </Grid>
+          <Grid item xs={12} md={8} className={classes.box}>
+            <Typography variant="body1" color="primary" align="center">
+              OPENING TIMES
+            </Typography>
           </Grid>
         </Grid>
       </Container>
