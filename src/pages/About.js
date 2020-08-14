@@ -7,6 +7,7 @@ import Container from "@material-ui/core/Container";
 import LocationOnIcon from "@material-ui/icons/LocationOn";
 import PhoneIcon from "@material-ui/icons/Phone";
 import EmailIcon from "@material-ui/icons/Email";
+import Maps from "../components/Maps";
 
 const useStyles = makeStyles((theme) => ({
   cardGrid: {
@@ -32,11 +33,19 @@ const useStyles = makeStyles((theme) => ({
     textDecoration: "underline",
   },
   box: {
-    border: "1px solid red",
+    // border: "1px solid red",
     backgroundColor: "#ECF0F1",
   },
   addressBox: {
     color: "#808080",
+  },
+  openingTimesContainer: {
+    marginTop: theme.spacing(4),
+  },
+  openingTimesTable: {
+    height: 60,
+    width: 60,
+    border: "1px solid white",
   },
 }));
 
@@ -53,13 +62,12 @@ export default function About() {
         </Grid>
       </Container>
       <Container className={classes.cardGrid} maxWidth="lg">
-        <Grid container>
-          <Grid container xs={12} md={4}>
+        <Grid container spacing={6}>
+          <Grid item xs={12} md={4}>
             <Grid
               container
+              spacing={2}
               direction="column"
-              // alignItems="center"
-
               className={classes.box}
             >
               <Grid item>
@@ -91,9 +99,118 @@ export default function About() {
             </Grid>
           </Grid>
           <Grid item xs={12} md={8} className={classes.box}>
-            <Typography variant="body1" color="primary" align="center">
+            <Typography variant="h4" align="center">
               OPENING TIMES
             </Typography>
+            <Grid
+              container
+              className={classes.openingTimesContainer}
+              spacing={2}
+            >
+              <Grid item xs={12}>
+                <Grid container justify="center">
+                  <Grid item className={classes.openingTimesTable}></Grid>
+                  <Grid item className={classes.openingTimesTable}>
+                    Mon
+                  </Grid>
+                  <Grid item className={classes.openingTimesTable}>
+                    Tue
+                  </Grid>
+                  <Grid item className={classes.openingTimesTable}>
+                    Wed
+                  </Grid>
+                  <Grid item className={classes.openingTimesTable}>
+                    Thur
+                  </Grid>
+                  <Grid item className={classes.openingTimesTable}>
+                    Fri
+                  </Grid>
+                  <Grid item className={classes.openingTimesTable}>
+                    Sat
+                  </Grid>
+                  <Grid item className={classes.openingTimesTable}>
+                    Sun
+                  </Grid>
+                </Grid>
+                <Grid container justify="center">
+                  <Grid item className={classes.openingTimesTable}>
+                    AM
+                  </Grid>
+                  <Grid item className={classes.openingTimesTable}>
+                    11:30
+                    <br />
+                    14:30
+                  </Grid>
+                  <Grid item className={classes.openingTimesTable}>
+                    11:30
+                    <br />
+                    14:30
+                  </Grid>
+                  <Grid item className={classes.openingTimesTable}>
+                    11:30
+                    <br />
+                    14:30
+                  </Grid>
+                  <Grid item className={classes.openingTimesTable}>
+                    11:30
+                    <br />
+                    14:30
+                  </Grid>
+                  <Grid item className={classes.openingTimesTable}>
+                    11:30
+                    <br />
+                  </Grid>
+                  <Grid item className={classes.openingTimesTable}>
+                    11:30
+                    <br />
+                  </Grid>
+                  <Grid item className={classes.openingTimesTable}>
+                    Closed
+                  </Grid>
+                </Grid>
+                <Grid container justify="center">
+                  <Grid item className={classes.openingTimesTable}>
+                    PM
+                  </Grid>
+                  <Grid item className={classes.openingTimesTable}>
+                    11:30
+                    <br />
+                    14:30
+                  </Grid>
+                  <Grid item className={classes.openingTimesTable}>
+                    11:30
+                    <br />
+                    14:30
+                  </Grid>
+                  <Grid item className={classes.openingTimesTable}>
+                    11:30
+                    <br />
+                    14:30
+                  </Grid>
+                  <Grid item className={classes.openingTimesTable}>
+                    11:30
+                    <br />
+                    14:30
+                  </Grid>
+                  <Grid item className={classes.openingTimesTable}>
+                    <br />
+                    14:30
+                  </Grid>
+                  <Grid item className={classes.openingTimesTable}>
+                    <br />
+                    14:30
+                  </Grid>
+                  <Grid item className={classes.openingTimesTable}>
+                    Closed
+                  </Grid>
+                </Grid>
+              </Grid>
+            </Grid>
+          </Grid>
+        </Grid>
+        <Grid container>
+          <Grid item lg={12}>
+            <Maps />
           </Grid>
         </Grid>
       </Container>
