@@ -46,7 +46,7 @@ const useStyles = makeStyles((theme) => ({
     height: 60,
     width: 60,
     border: "1px solid white",
-  },
+  }
 }));
 
 export default function About() {
@@ -209,7 +209,7 @@ export default function About() {
           </Grid>
         </Grid>
         <Grid container>
-          <Grid item lg={12}>
+          <Grid item lg={12} zeroMinWidth>
             <Maps />
           </Grid>
         </Grid>
