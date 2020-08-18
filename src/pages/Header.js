@@ -5,7 +5,6 @@ import CardContent from "@material-ui/core/CardContent";
 import { makeStyles } from "@material-ui/core/styles";
 import PhoneRoundedIcon from "@material-ui/icons/PhoneRounded";
 import LocationOnIcon from "@material-ui/icons/LocationOn";
-import ArrowForwardIcon from "@material-ui/icons/ArrowForward";
 import WatchLaterIcon from "@material-ui/icons/WatchLater";
 import Typography from "@material-ui/core/Typography";
 import Button from "@material-ui/core/Button";
