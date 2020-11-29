@@ -9,9 +9,6 @@ import Container from "@material-ui/core/Container";
 import cards from "./menuItems";
 
 const useStyles = makeStyles((theme) => ({
-  root: {
-    backgroundColor: "#ECF0F1",
-  },
   cardGrid: {
     paddingTop: theme.spacing(8),
     paddingBottom: theme.spacing(8),
@@ -40,7 +37,7 @@ export default function Menu() {
   const classes = useStyles();
 
   return (
-    <div className={classes.root}>
+    <div>
       <Container maxWidth="md" className={classes.menuHeading}>
         <Grid container justify="center">
           <Typography variant="h2">
